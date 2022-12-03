@@ -2,8 +2,9 @@ import _, { fromPairs } from "lodash";
 import "./style.css";
 import { geocording } from "./geocording";
 import { forecast } from "./forecast";
-import format from "date-fns/format";
-import { es } from "date-fns/locale";
+
+
+import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
 
 (function () {
   const searchInput = document.getElementById("searchLocation");
@@ -21,19 +22,26 @@ import { es } from "date-fns/locale";
       .then((data) => console.log(data))
       .catch((err) => console.log(err));*/
 
-      fromGeocordingToForecast()
+    fromGeocordingToForecast();
   };
-  
-  async function fromGeocordingToForecast(){
-    try{
+
+  async function fromGeocordingToForecast() {
+    try {
       const promiseObj = await fetchCountry(searchInputValue, "ESP");
-      const promiseUrl =  forecast(promiseObj["Lat"], promiseObj["Lon"])
-      const fetchUrlPromise = await fetch(promiseUrl)
+      const promiseUrl = forecast(promiseObj["Lat"], promiseObj["Lon"]);
+      const fetchUrlPromise = await fetch(promiseUrl);
       const jsonURLPromise = await fetchUrlPromise.json();
-      displayDayWeatherInfo(jsonURLPromise)
-    }catch(err){
-     console.log(err)
-   }
+      displayDayWeatherInfo(jsonURLPromise);
+      fetchGIF(jsonURLPromise["list"][0]["weather"][0]["main"])
+      /**
+       * Para la foto
+       * ["data"][0]["images"]["original"]["url"]
+       */
+
+
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   async function fetchCountry(country, state) {
@@ -45,22 +53,35 @@ import { es } from "date-fns/locale";
     };
   }
 
-  function displayDayWeatherInfo(b){
-    const nameAndDate = document.querySelector("[data-forecast='nameAndDate']");
-    const nameP = document.createElement('p');
-    nameP.textContent = b["city"]["name"];
+  async function fetchGIF(w){
+    /**
+     * https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=m8EuLgASSwTOUTEQBCpibavt4qDnKPun&limit=5
+     */
+    const part1 = "https://api.giphy.com/v1/gifs/search?q=";
+    const word = w;
+    const part2 = "&api_key=m8EuLgASSwTOUTEQBCpibavt4qDnKPun&limit=5";
 
-    let fecha = new Date();
+    const response = await fetch(part1 + word + part2);
+    const json = await response.json();
 
-    const dateAndHourP = document.createElement('p');
-    dateAndHourP.textContent = format(fecha, 'PPPP',{locale:es}) + " " + format(fecha, 'p',{locale:es});
-    
-    nameAndDate.append(nameP);
-    nameAndDate.append(dateAndHourP);
-
-    console.log(b);
-   
-  }
+    ///////
 
   
+
+    const description = document.querySelector("[data-forecast='description']");
+
+    description.style.cssText= ` 
+      background-image: url(${json['data'][0]['images']['original']['url']});
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    
+    `
+    
+
+
+
+    /////
+    console.log(json)
+  }
 })();
