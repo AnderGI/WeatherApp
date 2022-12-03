@@ -3,7 +3,6 @@ import "./style.css";
 import { geocording } from "./geocording";
 import { forecast } from "./forecast";
 
-
 import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
 
 (function () {
@@ -32,13 +31,11 @@ import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
       const fetchUrlPromise = await fetch(promiseUrl);
       const jsonURLPromise = await fetchUrlPromise.json();
       displayDayWeatherInfo(jsonURLPromise);
-      fetchGIF(jsonURLPromise["list"][0]["weather"][0]["main"])
+      fetchGIF(jsonURLPromise["list"][0]["weather"][0]["main"]);
       /**
        * Para la foto
        * ["data"][0]["images"]["original"]["url"]
        */
-
-
     } catch (err) {
       console.log(err);
     }
@@ -53,7 +50,7 @@ import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
     };
   }
 
-  async function fetchGIF(w){
+  async function fetchGIF(w) {
     /**
      * https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=m8EuLgASSwTOUTEQBCpibavt4qDnKPun&limit=5
      */
@@ -66,22 +63,17 @@ import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
 
     ///////
 
-  
+    const weatherGif = document.getElementById("weatherGif");
 
-    const description = document.querySelector("[data-forecast='description']");
-
-    description.style.cssText= ` 
-      background-image: url(${json['data'][0]['images']['original']['url']});
+    weatherGif.style.cssText = ` 
+      background-image: url(${json["data"][0]["images"]["original"]["url"]});
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
     
-    `
-    
-
-
+    `;
 
     /////
-    console.log(json)
+    console.log(json);
   }
 })();
