@@ -1,7 +1,7 @@
 //Con el nombre y el codigo del pais segun iso 3166 se consiguen lat y long
 //funcion para generar el url
 
-const geocording = (city,state,country) => {
+export const geocording = (city, country, state) => {
     /**
      * limit -> numero de dias para el forecast cada 3 horas
      */
