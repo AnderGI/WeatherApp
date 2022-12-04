@@ -4,11 +4,15 @@ import { es } from "date-fns/locale";
 export function displayDayWeatherInfo(b) {
 
   //UNA FUNCION
-  const nameAndDate = document.querySelector("#nameAndDate");
   const dayForecast = document.querySelector("#day");
   dayForecast.innerHTML = "";
-  const imgAndTemp = document.querySelector("#imgAndTemp");
+  const imgAndTemp = document.querySelector("#imgTempAndDate");
 
+ 
+  //nameAndDate.innerHTML = ""; 
+  
+    //Img and temp
+  //UNA FUNCION
   let fecha = new Date();
   const nameP = document.createElement("p");
   nameP.innerHTML =
@@ -19,8 +23,25 @@ export function displayDayWeatherInfo(b) {
     format(fecha, "PPPP", { locale: es }) 
     ;
 
-  nameAndDate.innerHTML = "";
-  nameAndDate.append(nameP);
+    let container1 = document.createElement("div");
+    container1.setAttribute("id", "weatherGif");
+
+    let container2 = document.createElement("div");
+    container2.setAttribute("id", "weatherTemp");
+    container2.append(nameP);
+
+    /*
+    let container3 = document.createElement("div");
+    let pTemp = document.createElement("p");
+    pTemp.setAttribute("id", "temp");
+    pTemp.textContent = b["list"][0]["weather"][0]["description"] + " K";
+    container3.append(pTemp);
+     b["list"][0]["main"]["temp"]
+    */
+
+    imgAndTemp.innerHTML = "";
+    imgAndTemp.append(container1);
+    imgAndTemp.append(container2);
 
   //FORECAST FOR THE COMPLETE DAY  
   //ASYNCRONO EN OTRA FUNCION
@@ -79,22 +100,6 @@ export function displayDayWeatherInfo(b) {
     }
   }
 
-  //Img and temp
-  //funcion que recibe un gif de giphy
-  //UNA FUNCION
-  let container1 = document.createElement("div");
-  container1.setAttribute("id", "weatherGif");
-
-  let container2 = document.createElement("div");
-  container2.setAttribute("id", "weatherTemp");
-  let pTemp = document.createElement("p");
-  pTemp.setAttribute("id", "temp");
-  pTemp.textContent = b["list"][0]["main"]["temp"] + " K";
-  container2.append(pTemp);
-
-  imgAndTemp.innerHTML = "";
-  imgAndTemp.append(container1);
-  imgAndTemp.append(container2);
 
   // ESTO EN DESCRIPCION
   //OTRA FUNCION
@@ -102,7 +107,8 @@ export function displayDayWeatherInfo(b) {
   const pDescription = document.createElement("div");
   pDescription.innerHTML = `
   <ul>
-    <li>${b["list"][0]["weather"][0]["description"]}</li>
+    <li><strong>${b["list"][0]["weather"][0]["description"]}</strong></li>
+    <li>${ b["list"][0]["main"]["temp"]} K</li>
     <li>Humidity : ${b["list"][0]["main"]["humidity"]} %</li>
     <li>Wind speed : ${b["list"][0]["wind"]["speed"]} m/s</li>
   </ul>
