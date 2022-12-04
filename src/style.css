@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --smokyBlack:    rgba(16,12,8,0.5);
+    --smokyBlack:    rgba(16,12,8,0.4);
 }
 
 body{
     height: 100vh;
     width: 100vw;
-    background: url("img/sky.avif"); /*Tobias Stonjeck Good Pic*/
+    background: url("img/sky.avif"); 
+    /*Leandra Rieger Good Pic*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -46,9 +47,12 @@ body{
     font-family: serif;
     text-transform: lowercase;
     
-    font-size: 4em;
+    font-size: 1.5em;
     font-weight: 700;
-    /*color: snow;*/
+    color: snow;
+    border-bottom: 0.5em solid snow;
+    border-radius: 10px;
+    background-color: var(--smokyBlack);
 }
 .header>div>button{
     height: 30%;
@@ -59,7 +63,7 @@ body{
     font-weight: 700;
     text-align: center;
     border: none;
-    background-color: rgba(16,12,8,0.3);
+    background-color: var(--smokyBlack);
 }
 .main{
     display: grid;
