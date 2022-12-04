@@ -20,7 +20,7 @@ export function displayDayWeatherInfo(b) {
     ", " +
     format(fecha, "p", { locale: es }) +
     "<br />" +
-    format(fecha, "PPPP", { locale: es }) 
+    format(fecha, "PP", { locale: es }) 
     ;
 
     let container1 = document.createElement("div");
@@ -61,22 +61,23 @@ export function displayDayWeatherInfo(b) {
       const containerImageOfDateAndhourDayForecast = document.createElement("div")
       const dayAndDateP = document.createElement("p");
 
-      dayAndDateP.textContent =
-        format(
+      dayAndDateP.innerHTML =
+      weatherInfo["dt_txt"].substring(
+        weatherInfo["dt_txt"].lastIndexOf(" ") + 1
+      ) + " : <strong>" +
+      weatherInfo["weather"][0]["description"] + "</strong>" 
+       /* format(
           Date.parse(
             weatherInfo["dt_txt"].substring(
               0,
               weatherInfo["dt_txt"].lastIndexOf(" ")
             )
           ),
-          "PPPP",
+          "PP",
           { locale: es }
         ) +
-        " a las " + ". " +
+         " a las " +*/
   
-            weatherInfo["dt_txt"].substring(
-              weatherInfo["dt_txt"].lastIndexOf(" ") + 1
-            ) + weatherInfo["weather"][0]["description"]
       ;
               
       

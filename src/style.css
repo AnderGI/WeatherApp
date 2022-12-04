@@ -2,16 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --offWhite: rgba(250, 249, 246);
+    --nightBlueShadow: #12343b; /*esto para el texto*/
 }
 
 body{
     height: 100vh;
     width: 100vw;
-    background: url("img/sky.svg"); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: #fafafa;
 }
 
 
@@ -49,9 +46,9 @@ body{
     font-size: 1.5em;
     font-weight: 700;
     color: var(--orange);
-    border-bottom: 5px solid var(--offWhite);
+    border-bottom: 5px solid var(--nightBlueShadow);
     border-radius: 10px;
-    background-color: var(--offWhite);
+    background-color: var(--nightBlueShadow);
 }
 .header>div>button{
     height: 30%;
@@ -62,7 +59,7 @@ body{
     font-weight: 700;
     text-align: center;
     border: none;
-    background-color: var(--offWhite);
+    background-color: var(--nightBlueShadow);
 }
 .main{
     display: grid;
@@ -125,7 +122,7 @@ p#temp{
     text-transform: lowercase;
     
     font-size: 1.5em;
-    color: var(--offWhite);
+    color: var(--nightBlueShadow);
 }
 
 .main>.dayForecast>div[data-item="2"]{
@@ -151,7 +148,7 @@ p#temp{
     text-transform: lowercase;
     font-size: 1.5em;
     text-align: right;
-    color: var(--offWhite);
+    color: var(--nightBlueShadow);
 }
 
 
@@ -173,7 +170,7 @@ p#temp{
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    color: var(--offWhite);
+    color: var(--nightBlueShadow);
 }
 .main>.dayForecast>div[data-item="4"]>div.dateAndHourDayForecast>p{
     font-family: serif;
