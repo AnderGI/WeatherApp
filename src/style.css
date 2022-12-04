@@ -2,18 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --smokyBlack:    rgba(16,12,8,0.5);
 }
 
 body{
     height: 100vh;
     width: 100vw;
+    background: url("img/sky.avif"); /*Tobias Stonjeck Good Pic*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
 
-div{
-    border: 2px solid black;
-}
 .container{
     display: grid;
     grid-template-columns: 1fr;
@@ -23,6 +25,42 @@ div{
     height: 100%;
 }
 
+.header{
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+
+.header>div{
+    align-self: center;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5em;
+}
+
+.header>div>input{
+    height: 30%;
+    width: 50%;
+    padding: 0.25em 0.5em;
+    font-family: serif;
+    text-transform: lowercase;
+    
+    font-size: 4em;
+    font-weight: 700;
+    /*color: snow;*/
+}
+.header>div>button{
+    height: 30%;
+    width: 15%;
+    padding: 0em 0.5em;
+    font-size: 2em;
+    color: snow;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    background-color: rgba(16,12,8,0.3);
+}
 .main{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -52,21 +90,25 @@ div{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     border-radius: 10px;
+    background-color: var(--smokyBlack);
 }
 .main>.dayForecast>div[data-item="1"]>div#nameAndDate{
     border-radius: 10px;
+    background-color: var(--smokyBlack);
 }
 
 p#temp{
     font-size: 1.5em;
     text-transform: lowercase;
     font-family: serif;
+    color: snow;
 }
 .main>.dayForecast>div[data-item="1"]>div#imgAndTemp>div#weatherTemp, .main>.dayForecast>div[data-item="1"]>div#nameAndDate{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+   
 }
 .main>.dayForecast>div[data-item="1"]>div#nameAndDate>p{
     text-align: center;
@@ -74,7 +116,7 @@ p#temp{
     text-transform: lowercase;
     
     font-size: 1.5em;
-
+    color: snow;
 }
 
 .main>.dayForecast>div[data-item="2"]{
@@ -83,6 +125,7 @@ p#temp{
     display: grid;
     padding: 0.25em 0.5em;
     border-radius: 10px;
+    background-color: var(--smokyBlack);
 }
 
 .main>.dayForecast>div[data-item="2"]>div{
@@ -99,6 +142,7 @@ p#temp{
     text-transform: lowercase;
     font-size: 1.5em;
     text-align: right;
+    color: snow;
 }
 
 
@@ -109,6 +153,8 @@ p#temp{
     display: grid;
     grid-template-columns: 1fr 3fr;
     border-radius: 10px;
+
+    background-color: var(--smokyBlack);
 }
 
 
@@ -118,6 +164,7 @@ p#temp{
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    color: snow;
 }
 .main>.dayForecast>div[data-item="4"]>div.dateAndHourDayForecast>p{
     font-family: serif;
@@ -146,7 +193,8 @@ p#temp{
 
 @media only screen and (max-device-width: 800px){
     .container{
-        grid-template-rows: 1fr 5fr;
+        grid-template-rows: 1fr 4fr;
+        padding: 0em 2em;
     }
     .main{
         display: grid;
@@ -160,11 +208,11 @@ p#temp{
     }
     .main>.dayForecast>div[data-item="1"]{
         grid-row: 1;
-        grid-column: span 4;
+        grid-column: span 2;
     }
     .main>.dayForecast>div[data-item="2"]{
-        grid-row: 2;
-        grid-column: span 4;
+        grid-row: 1;
+        grid-column: span 2;
         
     }
     .main>.dayForecast>div[data-item="2"]>div{
