@@ -6,7 +6,7 @@ export const geocording = (city, country, state) => {
      * limit -> numero de dias para el forecast cada 3 horas
      */
 
-    const part1 = "http://api.openweathermap.org/geo/1.0/direct?q=";
+    const part1 = "https://api.openweathermap.org/geo/1.0/direct?q=";
     let part2 = "";
     if(country === "US" || country === "USA"){
         part2 = `${city},${state},${country}&limit=5&appid=3bceb3bcb8dfde5c093bb5f845da74a6`;

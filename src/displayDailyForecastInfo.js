@@ -65,7 +65,7 @@ export function displayDayWeatherInfo(b) {
         containerDateAndHourOfDayForecast.append(dayAndDateP)
 
         containerImageOfDateAndhourDayForecast.style.cssText = ` 
-        background-image: url(http://openweathermap.org/img/wn/${weatherInfo['weather'][0]['icon']}@2x.png);
+        background-image: url(https://openweathermap.org/img/wn/${weatherInfo['weather'][0]['icon']}@2x.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;

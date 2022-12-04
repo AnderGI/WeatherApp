@@ -38,7 +38,7 @@ import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
       const weatherGif = document.getElementById("weatherGif");
       //get de icong depening on the weather from openweathermap
       weatherGif.style.cssText = ` 
-        background-image: url(http://openweathermap.org/img/wn/${jsonURLPromise["list"][0]["weather"][0]["icon"]}@2x.png);
+        background-image: url(https://openweathermap.org/img/wn/${jsonURLPromise["list"][0]["weather"][0]["icon"]}@2x.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
