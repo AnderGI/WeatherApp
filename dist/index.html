@@ -5,31 +5,41 @@
     <title>Weather App</title>
   </head>
   <body>
-    <header>
-      <label for="searchLocation">
-        Look for city (just Spain for now):
+    <div class="container">
+      <div class="header">
+        <label for="searchLocation">
+          Look for city (just Spain for now):
+          <br />
+          <input type="text" name="location" id="searchLocation" />
+        </label>
         <br />
-        <input type="text" name="location" id="searchLocation" />
-      </label>
-      <br />
-      <button id="searchBtn">Look for it</button>
-    </header>
+        <button id="searchBtn">Look for it</button>
+      </div>
 
-    <main>
-      <section>
-        <div data-item="1" data-forecast="nameAndDate"></div>
-        <div data-item="2" data-forecast="description"></div>
-        <div data-item="3" data-forecast="imgAndTemp"></div>
-        <div data-item="4" data-forecast="day"></div>
-      </section>
+      <div class="main">
+        <div class="dayForecast">
+          <div data-item="1">
+            <div id="imgAndTemp">
 
-      <section>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </section>
-    </main>
+            </div>
+            <div id="nameAndDate">
+              
+            </div>
+          </div>
+          <div data-item="2" id="description"></div>
+          <div data-item="4" id="day">
+
+          </div>
+        </div>
+
+        <div class="weekForecast">
+          <div data-item="1"></div>
+          <div data-item="2"></div>
+          <div data-item="3"></div>
+          <div data-item="4"></div>
+        </div>
+      </div>
+    </div>
 
     <script src="bundle.js"></script>
   </body>
