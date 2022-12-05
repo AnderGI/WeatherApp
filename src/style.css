@@ -3,16 +3,122 @@
     padding: 0;
     box-sizing: border-box;
     --nightBlueShadow: #12343b; /*esto para el texto*/
+    --backgroundColor : #f5eef6;
+    --darkTurquoise : #152a6c;
+    --stickyFooterColor: #4a3754;
 }
 
 body{
-    height: 100vh;
-    width: 100vw;
-    background-color: #fafafa;
+    background-color: var(--backgroundColor);
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 4fr;
+    width: 100%;
+}
+
+
+/*-------------HEADER----------------------------------*/
+.container>div#currentTimeForecast{
+    display: grid;
+    grid-template: 1fr 2fr / 1fr;
+    row-gap: 0.5em;
+}
+
+.container>div#currentTimeForecast>div{
+    border: 1px solid black;
+}
+
+.container>div#currentTimeForecast>div#dateAndHour{
+    padding: 0.25em 1em;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.container>div#currentTimeForecast>div#imgAndDescription{
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+}
+.container>div#currentTimeForecast>div#imgAndDescription>div{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.container>div#nextHoursForecast{
+    display: grid;
+    grid-template: 1fr 3fr / 1fr;
+}
+
+.container>div#nextHoursForecast>div#nextHoursDescription{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+}
+
+.container>div#nextHoursForecast>div#nextHoursDescription>div.nextHoursItem{
+    display: grid;
+    grid-template: 1fr / 1fr 2fr;
+}
+
+.container>div#nextHoursForecast>div#nextHours>h1, .container>div#nextDaysForecast>div#nextDays>h1{
+    font-family: cursive;
+    transform: skew(-20deg);
+    text-shadow: 0.075em 0.003125em 0.0625em rgb(103, 3, 3);
+    text-transform: uppercase;
+    letter-spacing: 0.0125em;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0.5em 0.25em;
+
+}
+.container>div#nextDaysForecast>div#nextDaysContainer{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+    padding: 2em 3em;
+    gap: 0.75em 0em;
+}
+
+.container>div#nextDaysForecast>div#nextDaysContainer>div.nextDaysItem{
+    display: grid;
+    grid-template: 1fr / 1fr 2fr;
+    background-color: var(--darkTurquoise);
+    padding: 1em 2em;
+    border-radius: 10px;
+    
+}
+
+.container>div#nextDaysForecast>div#nextDaysContainer>div.nextDaysItem>div{
+    color:var(--backgroundColor);
+    
 }
 
 
 
+div#search{
+    position: -webkit-sticky;
+    position: fixed;
+    bottom: 0px;
+    background-color: var(--stickyFooterColor);
+    border: none;
+   width: 100%;
+   height: 10vh;
+}
+
+
+
+
+
+
+
+/*
 .container{
     display: grid;
     grid-template-columns: 1fr;
@@ -84,7 +190,7 @@ body{
     grid-template: 1fr 1fr;
     gap: 0.5em;
     /*background-color: var(--offWhite);*/
-}
+/*}
 
 .main>.dayForecast>div[data-item="1"]>div>p{
     color: var(--orange);
@@ -97,11 +203,11 @@ body{
     grid-template-rows: 1fr;
     border-radius: 10px;
     /*background-color: var(--offWhite);*/
-}
+/*}
 .main>.dayForecast>div[data-item="1"]>div#nameAndDate{
     border-radius: 10px;
     /*background-color: var(--offWhite);*/
-}
+/*}
 
 p#temp{
     font-size: 1.5em;
@@ -132,7 +238,7 @@ p#temp{
     padding: 0.25em 0.5em;
     border-radius: 10px;
     /*background-color: var(--offWhite);*/
-}
+/*}
 
 .main>.dayForecast>div[data-item="2"]>div{
     justify-self: end;
@@ -161,7 +267,7 @@ p#temp{
     border-radius: 10px;
 
     /*background-color: var(--offWhite);*/
-}
+/*}
 
 
 .main>.dayForecast>div[data-item="4"]>div.dateAndHourDayForecast{
@@ -184,7 +290,7 @@ p#temp{
 .main>.weekForecast{
     display: grid;
 
-}
+}*/
 
 
 
@@ -198,6 +304,13 @@ p#temp{
 
 
 @media only screen and (max-device-width: 800px){
+
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 4fr;
+        padding: 3em 1em;
+    }
+    /*
     .container{
         grid-template-rows: 1fr 4fr;
         padding: 0em 2em;
@@ -241,5 +354,5 @@ p#temp{
 
     p, li{
         font-size: 1em;
-    }
+    }*/
 }

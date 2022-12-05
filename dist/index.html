@@ -5,6 +5,79 @@
     <title>Weather App</title>
   </head>
   <body>
+
+    <div class="container">
+      <div id="currentTimeForecast">
+        <div id="dateAndHour">
+            <h1>Date and Hour</h1>      
+        </div>
+        <div id="imgAndDescription">
+          <div id="img">
+            <p>Img</p>
+          </div>
+          <div id="description">
+            <p>description</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="nextHoursForecast">
+        <div id="nextHours">
+            <h1>next hours</h1>
+        </div>
+
+        <div id="nextHoursDescription">
+            <div class="nextHoursItem">
+              <div>1</div>
+              <div>2</div>
+            </div>
+            <div class="nextHoursItem">
+              <div>1</div>
+              <div>2</div>
+            </div>
+            <div class="nextHoursItem">
+              <div>1</div>
+              <div>2</div>
+            </div>
+            <div class="nextHoursItem">
+              <div>1</div>
+              <div>2</div>
+            </div>
+        </div>
+
+      </div>
+      
+      <div id="nextDaysForecast">
+        <div id="nextDays">
+          <h1>next days</h1>
+        </div>
+        
+        <div id="nextDaysContainer">
+          <div class="nextDaysItem">
+            <div>Logo</div>
+            <div>Descr</div>
+          </div>
+          <div class="nextDaysItem">
+            <div>Logo</div>
+            <div>Descr</div>
+          </div>
+          <div class="nextDaysItem">
+            <div>Logo</div>
+            <div>Descr</div>
+          </div>
+          <div class="nextDaysItem">
+            <div>Logo</div>
+            <div>Descr</div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    <div id="search">
+      <input type="text" name="location" id="searchLocation" />
+      <button id="searchBtn">&#9730;</button>
+    </div>
+  <!--  
     <div class="container">
       <div class="header">
         <div>
@@ -26,7 +99,7 @@
         <div class="weekForecast"></div>
       </div>
     </div>
-
+-->
     <script src="bundle.js"></script>
   </body>
 </html>
