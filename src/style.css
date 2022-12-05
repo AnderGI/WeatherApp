@@ -24,6 +24,7 @@ body{
 
 
 /*-------------HEADER----------------------------------*/
+/*-----------------DATE AND HOUR AND LOCATION-------------*/
 .container>div#currentTimeForecast{
     display: grid;
     grid-template: 1fr 2fr / 1fr;
@@ -35,22 +36,45 @@ body{
 }
 
 .container>div#currentTimeForecast>div#dateAndHour{
-    padding: 0.25em 1em;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-}
-.container>div#currentTimeForecast>div#imgAndDescription{
+    padding: 0.75em 6em;
     display: grid;
     grid-template: 1fr / 1fr 1fr;
+
 }
-.container>div#currentTimeForecast>div#imgAndDescription>div{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+.container>div#currentTimeForecast>div#dateAndHour>div{
+    justify-self: stretch;
+    
 }
+.container>div#currentTimeForecast>div#dateAndHour>div:first-child{
+    background: url("/src/img/location-pin.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container>div#currentTimeForecast>div#dateAndHour>div:last-child>h1{
+    font-family: cursive;
+}
+
+/*--------------------IMG AND DESCRIPTION---------------------------*/
+.container>div#currentTimeForecast>div#imgAndDescription{
+    display: grid;
+    grid-template: 1fr / 1fr 3fr;
+    padding: 0em 5em;
+    gap: 0em 0.5em;
+}
+.container>div#currentTimeForecast>div#imgAndDescription>div, 
+.container>div#currentTimeForecast>div#imgAndDescription>div#description>div
+, .container>div#nextHoursForecast>div#nextHoursDescription>div>div{
+    border: 1px solid black;
+}
+.container>div#currentTimeForecast>div#imgAndDescription>div#description{
+    display: grid;
+    grid-auto-flow: row;
+}
+
+/*------------------NEXT HOURS-----------------------------*/
+
 .container>div#nextHoursForecast{
     display: grid;
     grid-template: 1fr 3fr / 1fr;
@@ -63,6 +87,9 @@ body{
 }
 
 .container>div#nextHoursForecast>div#nextHoursDescription>div.nextHoursItem{
+    justify-self: center;
+    align-self: center;
+    gap: 0em 0.5em;
     display: grid;
     grid-template: 1fr / 1fr 2fr;
 }
@@ -78,6 +105,8 @@ body{
     padding: 0.5em 0.25em;
 
 }
+
+/*-----------------------------NEXT DAYS-------------------------------*/
 .container>div#nextDaysForecast>div#nextDaysContainer{
     display: grid;
     grid-auto-flow: row;
@@ -101,15 +130,58 @@ body{
 }
 
 
+/*--------------------------STICKY NAVBAR-----------------*/
 
 div#search{
     position: -webkit-sticky;
-    position: fixed;
-    bottom: 0px;
+    position: sticky;
+    margin-bottom: 10px;
+    z-index: 1;
+    top: 0px;
     background-color: var(--stickyFooterColor);
     border: none;
    width: 100%;
    height: 10vh;
+
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+}
+
+div#search>div:first-child{
+    align-self: center;
+    height: 90%;
+    background: url("/src/img/forecast-logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    padding: 0.25em 0em;
+}
+
+div#search>div:last-child{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+div#search>div:last-child>div:first-child{
+    display: grid;
+    grid-template: 1fr / 1fr;
+    padding: 0.5em 0em;
+}
+div#search>div:last-child>div:first-child>input{
+    justify-items: stretch;
+    font-size: 1.5em;
+    font-style: italic;
+    text-decoration: it;
+    padding: 0.125em 0.25em;
+    background-color: snow;
+
+}
+div#search>div:last-child>div#searchBtn{
+    background: url("/src/img/weather-forecast.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
