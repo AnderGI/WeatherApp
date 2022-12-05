@@ -3,9 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     --nightBlueShadow: #12343b; /*esto para el texto*/
-    --backgroundColor : #f5eef6;
+   --backgroundColor:#282A3A;
     --darkTurquoise : #152a6c;
-    --stickyFooterColor: #4a3754;
+    --text: #fffdef;
+    --stickyFooterColor: #000000;
+    --headings:#a3f7bf;
 }
 
 body{
@@ -37,29 +39,25 @@ body{
 
 .container>div#currentTimeForecast>div#dateAndHour{
     padding: 0.75em 6em;
-    display: grid;
-    grid-template: 1fr / 1fr 1fr;
-
-}
-.container>div#currentTimeForecast>div#dateAndHour>div{
-    justify-self: stretch;
-    
-}
-.container>div#currentTimeForecast>div#dateAndHour>div:first-child{
-    background: url("/src/img/location-pin.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.container>div#currentTimeForecast>div#dateAndHour>div:last-child>h1{
+
+
+.container>div#currentTimeForecast>div#dateAndHour>p{
     font-family: cursive;
+    text-transform: lowercase;
+    color: var(--headings);
+    font-size: 1.5em;
 }
 
 /*--------------------IMG AND DESCRIPTION---------------------------*/
 .container>div#currentTimeForecast>div#imgAndDescription{
     display: grid;
-    grid-template: 1fr / 1fr 3fr;
+    grid-template: 1fr / 1fr 1fr;
     padding: 0em 5em;
     gap: 0em 0.5em;
 }
@@ -71,6 +69,20 @@ body{
 .container>div#currentTimeForecast>div#imgAndDescription>div#description{
     display: grid;
     grid-auto-flow: row;
+}
+
+.container>div#currentTimeForecast>div#imgAndDescription>div#description>div{
+    padding: 0.25em 1em;
+    font-family: cursive;
+    text-align: end;
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.container>div#currentTimeForecast>div#imgAndDescription>div#description>div:first-child{
+    font-size: 1.5em;
+    font-weight: 700;
 }
 
 /*------------------NEXT HOURS-----------------------------*/
@@ -97,6 +109,7 @@ body{
 .container>div#nextHoursForecast>div#nextHours>h1, .container>div#nextDaysForecast>div#nextDays>h1{
     font-family: cursive;
     transform: skew(-20deg);
+    color: #a3f7bf;
     text-shadow: 0.075em 0.003125em 0.0625em rgb(103, 3, 3);
     text-transform: uppercase;
     letter-spacing: 0.0125em;
@@ -142,7 +155,7 @@ div#search{
     border: none;
    width: 100%;
    height: 10vh;
-
+    padding: 0.5em 0em;
    display: grid;
    grid-template-columns: 1fr 2fr;
 }
@@ -150,7 +163,7 @@ div#search{
 div#search>div:first-child{
     align-self: center;
     height: 90%;
-    background: url("/src/img/forecast-logo.png");
+    background: url("/src/img/cloud-season-weather-svgrepo-com.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -178,7 +191,7 @@ div#search>div:last-child>div:first-child>input{
 
 }
 div#search>div:last-child>div#searchBtn{
-    background: url("/src/img/weather-forecast.svg");
+    background: url("/src/img/weather-svgrepo-com.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

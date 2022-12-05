@@ -7,10 +7,10 @@ import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
 
 (function () {
   const searchInput = document.getElementById("searchLocation");
-  const searchBtn = document.getElementById("searchBtn");
+  const searchDiv = document.getElementById("searchBtn");
   let searchInputValue;
 
-  searchBtn.onclick = () => {
+  searchDiv.onclick = () => {
     searchInputValue = searchInput.value;
     searchInput.value = "";
     //UNA MANERA CON LA PROMISE CHANNING Y OTRA PODRIA SER CON LA FUNCION XX
@@ -33,11 +33,10 @@ import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
       });
       const jsonURLPromise = await fetchUrlPromise.json();
       displayDayWeatherInfo(jsonURLPromise);
-      console.log(jsonURLPromise["list"][0]["weather"][0]["icon"])
+      console.log(jsonURLPromise)
       
-      const weatherGif = document.getElementById("weatherGif");
-      //get de icong depening on the weather from openweathermap
-      weatherGif.style.cssText = ` 
+      const weatherImg = document.getElementById("img");
+      weatherImg.style.cssText = ` 
         background-image: url(https://openweathermap.org/img/wn/${jsonURLPromise["list"][0]["weather"][0]["icon"]}@2x.png);
         background-repeat: no-repeat;
         background-size: contain;

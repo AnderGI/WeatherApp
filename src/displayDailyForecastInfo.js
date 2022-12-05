@@ -3,17 +3,87 @@ import { es } from "date-fns/locale";
 
 export function displayDayWeatherInfo(b) {
 
-  //UNA FUNCION
-  const dayForecast = document.querySelector("#day");
+  //UNA FUNCION para el date y hour
+  const dayForecast = document.getElementById("dateAndHour");
   dayForecast.innerHTML = "";
-  const imgAndTemp = document.querySelector("#imgTempAndDate");
+  const dateAndHourP = document.createElement("p")
+  let today = new Date();
+  const formatedDate = format(today, "PP", {locale: es});
+  const formatedTime = format(today,"p",{locale:es});
+  dateAndHourP.textContent = formatedDate + ", " + formatedTime;
+  dayForecast.append(dateAndHourP);
+
+  //descripccion de ese dia
+  const dayDescriptionEl = document.getElementById("description");
+  const K = b["list"][0]["main"]["temp"];
+  let C = K - 273.15;
+  C = C.toFixed(2)
+  dayDescriptionEl.innerHTML = `
+  <div>${C} Cº</div>
+  <div>${K} K</div>
+  <div>${b["list"][0]["weather"][0]["description"]}</div>
+  <div>Humidity : ${b["list"][0]["main"]["humidity"]} %</div>
+  <div>Wind speed : ${b["list"][0]["wind"]["speed"]} m/s</div>
+`;
+
+
+
+  //funcion para las horas de ese mismo dia
+  const nextHoursContainer = document.getElementById("nextHoursDescription")
+    for (let weatherInfo of b["list"]){
+    if (
+      //si la fecha de hoy es la misma que la que la api te da 12-05-2022 si es igual 12-05-2022
+      today.toDateString() ===
+      new Date(
+        weatherInfo["dt_txt"].substring(
+          0,
+          weatherInfo["dt_txt"].lastIndexOf(" ")
+        )
+      ).toDateString()
+    ) {
+      const nextHoursItem = document.createElement("div");
+      nextHoursItem.setAttribute("class","nextHoursItem");
+
+      const nextHoursImg = document.createElement("div");
+      nextHoursImg.setAttribute("class","nextHoursImg");
+
+      const nextHoursDesc = document.createElement("div");
+      nextHoursDesc.setAttribute("class","nextHoursDesc");
+
+  
+
+      nextHoursImg.style.cssText = ` 
+      background-image: url(https://openweathermap.org/img/wn/${weatherInfo['weather'][0]['icon']}@2x.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    
+    `;
+      nextHoursItem.append(nextHoursImg);
+
+      const dayHourDate = Date.parse( weatherInfo["dt_txt"]);
+      const dayHourDateFormat = format(dayHourDate,"p",{locale:es})
+      const dayDescription = weatherInfo["weather"][0]["description"];
+      nextHoursDesc.textContent = dayHourDateFormat + "; " + dayDescription ;
+      
+      nextHoursItem.append(nextHoursDesc);
+      nextHoursContainer.append(nextHoursItem);
+    }
+  }
+
+  
+  //b["list"][0]["dt_txt"]
+  
+  
+  
+  //const imgAndTemp = document.querySelector("#imgTempAndDate");
 
  
   //nameAndDate.innerHTML = ""; 
   
     //Img and temp
   //UNA FUNCION
-  let fecha = new Date();
+  /*let fecha = new Date();
   const nameP = document.createElement("p");
   nameP.innerHTML =
     b["city"]["name"] +
@@ -39,13 +109,13 @@ export function displayDayWeatherInfo(b) {
      b["list"][0]["main"]["temp"]
     */
 
-    imgAndTemp.innerHTML = "";
+  /*  imgAndTemp.innerHTML = "";
     imgAndTemp.append(container1);
-    imgAndTemp.append(container2);
+    imgAndTemp.append(container2);*/
 
   //FORECAST FOR THE COMPLETE DAY  
   //ASYNCRONO EN OTRA FUNCION
-  for (let weatherInfo of b["list"]) {
+  /*for (let weatherInfo of b["list"]) {
     if (
       //si la fecha de hoy es la misma que la que la api te da 12-05-2022 si es igual 12-05-2022
       fecha.toDateString() ===
@@ -78,7 +148,7 @@ export function displayDayWeatherInfo(b) {
         ) +
          " a las " +*/
   
-      ;
+      /*;
               
       
 
@@ -102,23 +172,9 @@ export function displayDayWeatherInfo(b) {
   }
 
 
-  // ESTO EN DESCRIPCION
-  //OTRA FUNCION
-  const description = document.querySelector("#description");
-  const pDescription = document.createElement("div");
-  pDescription.innerHTML = `
-  <ul>
-    <li><strong>${b["list"][0]["weather"][0]["description"]}</strong></li>
-    <li>${ b["list"][0]["main"]["temp"]} K</li>
-    <li>Humidity : ${b["list"][0]["main"]["humidity"]} %</li>
-    <li>Wind speed : ${b["list"][0]["wind"]["speed"]} m/s</li>
-  </ul>
-  `;
 
-  description.innerHTML = "";
-  description.appendChild(pDescription);
 
   const pHumidity = document.createElement("p");
 
-  console.log(b);
+  console.log(b);*/
 }
