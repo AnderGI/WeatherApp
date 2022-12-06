@@ -41,7 +41,7 @@ export function displayDayWeatherInfo(searchInputValue, b) {
       }
 
       dateHourLocationDiv.innerHTML = `
-        <p>${dayHourDateFormat}; ${format(today,"p",{locale:es})}</p>
+        <p>${format(today,"PPP", {locale : es})}; ${dayHourDateFormat})}</p>
         <p>${searchInputValue}</p>
         <p>${dayDescription}</p>
       `
