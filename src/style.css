@@ -85,6 +85,48 @@ div.roundBtnList > div.roundBtn.activeBtn{
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+div.itemSearch{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: var(--box);
+        border-radius: 10px;
+        box-shadow: 0em 0em 0.25em 0.25em black;
+        z-index: 2;
+        display: flex;
+        flex-flow: row wrap;
+        row-gap: 1em;
+        align-items: center;
+       
+}
+div.itemSearch.disabled{
+    display: none;
+}
+
+button.cityBtn:hover{
+    cursor: pointer;
+ 
+}
+button.cityBtn>span::after{
+    content: '🔍';
+}
+input#searchCity{
+    width: 50%;
+    height: 10%;
+    padding: 0.25em 0.75em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(0,0,0,0);
+    font-weight: 700;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+
 div.itemList{
     width: 100%;
     height: 100%;
@@ -94,7 +136,9 @@ div.itemList{
     align-items: center;
     position: relative;
 }
-
+div.itemList.notVisible{
+    opacity: 0;
+}
 div.item{
     position: absolute;
     width: 80%;

@@ -1,12 +1,40 @@
 import _, { fromPairs } from "lodash";
 import "./style.css";
+import { slideCarrousel, btnListCarrousel } from "./carrousel";
+import { disableSearchSlide } from "./disableSearchSlide";
 import { geocording } from "./geocording";
 import { forecast } from "./forecast";
 
 import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
 
+(function(){
+ 
+  const btnList = document.querySelectorAll("button");
+  const cityBtn = document.querySelector(".cityBtn");
+  const searchInput = document.getElementById("searchCity");
+
+  btnList.forEach((btn) => {
+    btn.onclick = () => {
+      slideCarrousel(btn);
+      btnListCarrousel(btn);
+    };
+  });
+
+  cityBtn.onclick = () => {
+    disableSearchSlide()
+    console.log(searchInput.value)
+  }
+ 
+})();
+
+
+
+
+
+
+/*
 (function () {
- /* const searchInput = document.getElementById("searchLocation");
+  const searchInput = document.getElementById("searchLocation");
   const searchDiv = document.getElementById("searchBtn");
   let searchInputValue;
 
@@ -23,7 +51,7 @@ import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
 
     //fromGeocordingToForecast();
   //};
-
+/*
   async function fromGeocordingToForecast() {
     try {
       const promiseObj = await fetchCountry(searchInputValue, "ESP");
@@ -52,10 +80,10 @@ import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
        * Para la foto
        * ["data"][0]["images"]["original"]["url"]
        */
-    } catch (err) {
+    /*} catch (err) {
       console.log(err);
     }
-  }
+  }*/
 /*
   async function fetchCountry(country, state) {
     const request = await fetch(geocording(country, state),{
@@ -68,4 +96,4 @@ import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
     };
   }*/
 
-})();
+//})();

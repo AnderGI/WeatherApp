@@ -1,6 +1,5 @@
-const btnList = document.querySelectorAll("button");
 
-function slideCarrousel(btn) {
+export function slideCarrousel(btn) {
   //alterIndex  of slides--> Depends on next or prev btn
   const alterIndex = btn.classList.contains("next") ? 1 : -1;
   //get the current active slide which we'll alter
@@ -23,7 +22,7 @@ function slideCarrousel(btn) {
   activeSlide.classList.remove("activeSlide");
 }
 
-function btnListCarrousel(btn) {
+export function btnListCarrousel(btn) {
   //alter the same way the index in the button nodeList
   const alterIndex = btn.classList.contains("next") ? 1 : -1;
   //get tha button which has the active class
@@ -40,9 +39,3 @@ function btnListCarrousel(btn) {
   activeBtn.classList.remove("activeBtn");
 }
 
-btnList.forEach((btn) => {
-  btn.onclick = () => {
-    slideCarrousel(btn);
-    btnListCarrousel(btn);
-  };
-});
