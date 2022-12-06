@@ -6,7 +6,7 @@ import { forecast } from "./forecast";
 import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
 
 (function () {
-  const searchInput = document.getElementById("searchLocation");
+ /* const searchInput = document.getElementById("searchLocation");
   const searchDiv = document.getElementById("searchBtn");
   let searchInputValue;
 
@@ -21,8 +21,8 @@ import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
       .then((data) => console.log(data))
       .catch((err) => console.log(err));*/
 
-    fromGeocordingToForecast();
-  };
+    //fromGeocordingToForecast();
+  //};
 
   async function fromGeocordingToForecast() {
     try {
@@ -32,7 +32,7 @@ import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
         mode:"cors"
       });
       const jsonURLPromise = await fetchUrlPromise.json();
-      displayDayWeatherInfo(jsonURLPromise);
+      //displayDayWeatherInfo(jsonURLPromise);
       console.log(jsonURLPromise)
       
       const weatherImg = document.getElementById("img");
@@ -56,7 +56,7 @@ import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
       console.log(err);
     }
   }
-
+/*
   async function fetchCountry(country, state) {
     const request = await fetch(geocording(country, state),{
       mode:"cors",
@@ -66,6 +66,6 @@ import { displayDayWeatherInfo } from "./displayDailyForecastInfo";
       Lat: response[0]["lat"],
       Lon: response[0]["lon"],
     };
-  }
+  }*/
 
 })();
