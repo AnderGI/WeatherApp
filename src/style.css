@@ -163,7 +163,6 @@ div.item.activeSlide{
 div.item>div:first-child{
     grid-column: 1;
     grid-row: span 2;
-    border: 2px solid black;
     padding: 2em 0.5em;
     display: flex;
     flex-flow: column wrap;
@@ -189,7 +188,6 @@ div.item>div:first-child>p:nth-child(2n+1){
 div.item>div#img{
     grid-column: 2;
     grid-row: span 2;
-    border: 2px solid black;
 }
 
 div.item>div:last-child{
@@ -204,7 +202,6 @@ div.item>div:last-child{
 }
 
 div.item>div:last-child>div{
-    border: 2px solid black;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
