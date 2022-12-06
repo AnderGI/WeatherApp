@@ -1,5 +1,6 @@
 import format from "date-fns/format";
 import { es } from "date-fns/locale";
+import { weatherImages } from "./weatherImages";
 
 export function displayDayWeatherInfo(searchInputValue, b) {
 
@@ -48,7 +49,7 @@ export function displayDayWeatherInfo(searchInputValue, b) {
 
 
       imgDiv.style.cssText = ` 
-      background-image: url(https://openweathermap.org/img/wn/${weatherInfo['weather'][0]['icon']}@2x.png);
+      background-image: url(${weatherImages(weatherInfo["weather"][0]["main"])});
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
