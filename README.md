@@ -14,5 +14,5 @@ Key concepts to build this app:
  - The Odin Project, in this case, to this student for the visual design inspiration : Fernando Ed.
  - The Coding Train YouTube channel for the Promises series.
 
-#ERROR
+# ERROR
 Images dont render correctly on phone
