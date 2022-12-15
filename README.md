@@ -15,5 +15,5 @@ Key concepts to build this app:
  - The Coding Train YouTube channel for the Promises series.
 
 # ERROR
-Images dont render correctly on phone
-Instead o fhaving two hours it should be first the hour and then the date.
+- Images dont render correctly on phone
+- Instead of having two hours it should be first the hour and then the date.
