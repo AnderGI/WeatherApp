@@ -16,3 +16,4 @@ Key concepts to build this app:
 
 # ERROR
 Images dont render correctly on phone
+Instead o fhaving two hours it should be first the hour and then the date.
