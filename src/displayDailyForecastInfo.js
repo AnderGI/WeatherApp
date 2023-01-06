@@ -24,8 +24,8 @@ export function displayDayWeatherInfo(searchInputValue, b) {
       itemDiv.setAttribute("class","item");
       const dateHourLocationDiv = document.createElement("div");
       dateHourLocationDiv.setAttribute("id","dateHourLocation");
-      const imgDiv = document.createElement("div");
-      imgDiv.setAttribute("id","img");
+      //const imgDiv = document.createElement("div");
+      //imgDiv.setAttribute("id","img");
       const infoDiv = document.createElement("div");
       infoDiv.setAttribute("id","info");
       
@@ -41,22 +41,12 @@ export function displayDayWeatherInfo(searchInputValue, b) {
       }
 
       dateHourLocationDiv.innerHTML = `
-        <p>${format(today,"PPP", {locale : es})}; ${dayHourDateFormat})}</p>
+        <p>${format(today,"PPP", {locale : es})}; ${dayHourDateFormat}</p>
         <p>${searchInputValue}</p>
         <p>${dayDescription}</p>
       `
+ 
       itemDiv.append(dateHourLocationDiv)
-
-
-      imgDiv.style.cssText = ` 
-      background-image: url(${weatherImages(weatherInfo["weather"][0]["main"])});
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-    
-    `;
-      itemDiv.append(imgDiv);
-
 
       const KTemp = weatherInfo["main"]["temp"];
       let CTemp = KTemp - 273.15;

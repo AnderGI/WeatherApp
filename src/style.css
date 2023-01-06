@@ -161,13 +161,14 @@ div.item.activeSlide{
 
 
 div.item>div:first-child{
-    grid-column: 1;
+    grid-column: span 2;
     grid-row: span 2;
     padding: 2em 0.5em;
     display: flex;
     flex-flow: column wrap;
     row-gap: 1em;
     justify-content: center;
+    align-items: center;
 }
 
 div.item>div:first-child>p:nth-child(2){
@@ -185,11 +186,12 @@ div.item>div:first-child>p:nth-child(2n+1){
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+/*
 div.item>div#img{
     grid-column: 2;
     grid-row: span 2;
 }
-
+*/
 div.item>div:last-child{
     grid-column: span 2;
     grid-row: span 2;
