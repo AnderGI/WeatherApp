@@ -3,7 +3,7 @@ const path = require("node:path");
 
 const rulesForJS = {
   test: /\.js$/i,
-  use: "babel-loader",
+  loader: "babel-loader",
   options: {
     presets: ["@babel/preset-env"],
   },
@@ -22,4 +22,8 @@ module.exports = {
     rules,
   },
   plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
+  devServer: {
+    open: true,
+    port: 3000,
+  },
 };
