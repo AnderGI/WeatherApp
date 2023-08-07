@@ -12,4 +12,7 @@ function renderWeatherCards(dailyMinMaxTemps) {
   for (const entry of Object.entries(dailyMinMaxTemps)) {
     weatherCardsSection.innerHTML += WeatherCards(entry, isTempInC);
   }
+  //the first cards is going to be TODAY (the day the user opens the app)
+  //so it should be selected
+  weatherCardsSection.children[0].classList.add("selected");
 }

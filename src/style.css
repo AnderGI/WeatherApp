@@ -49,6 +49,10 @@ main section#weatherToogler article.selected {
   background-color: var(--cardHoveredBlack);
 }
 
+main section#weatherToogler article * {
+  pointer-events: none;
+}
+
 span.light {
   color: var(--lightWhite);
 }

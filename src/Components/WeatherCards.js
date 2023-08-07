@@ -12,10 +12,10 @@ export const WeatherCards = (objectEntry, isTempInC) => {
     ? `${maxTempInfo.C} ºC`
     : `${maxTempInfo.F} F`;
   return `
-  <article>
+  <article class="weatherCard">
     <p><span class="light">${key}</span></p>
     <p>
-        <big><span class="light">${maxTempMessage}</span></big> /
+        <big><span class="light">${maxTempMessage} /</span></big> 
         <small><span class="dark">${minTempMessage}</span></small>
     </p>
   </article>
