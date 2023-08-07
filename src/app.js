@@ -7,12 +7,12 @@ import { registerEvents } from "./Events/registerEvents";
 
 try {
   const data = await weatherForecast("Bilbao", OPEN_WEATHER_MAP);
-  registerEvents();
 
   const groupedData = getJSONData(data);
-  console.log(groupedData);
-  renderPage(groupedData);
 
+  console.log(groupedData);
+  registerEvents(groupedData);
+  renderPage(groupedData);
   //lista de valores maximos y minimos de temperatues
 } catch (err) {
   console.log(err);

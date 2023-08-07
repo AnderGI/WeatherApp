@@ -21,7 +21,7 @@ body {
   padding: 1em;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1fr 4fr;
   background-color: var(--backgroundBody);
 }
 
@@ -29,6 +29,63 @@ body main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 3fr 1fr;
+}
+
+main section#todayInfo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+main section#todayInfo #details {
+  display: grid;
+  grid-template-areas:
+    ". . date date . ."
+    "temp temp details . . ."
+    "temp temp details . . .";
+
+  letter-spacing: 0.1em;
+}
+
+main section#todayInfo #details div.temps {
+  grid-area: temp;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+main section#todayInfo #details div.temps span {
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+main section#todayInfo #details div.date {
+  grid-area: date;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom-color: var(--darkWhite);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+main section#todayInfo #details div.tabularData {
+  grid-area: details;
+  display: grid;
+  justify-items: stretch;
+}
+
+main section#todayInfo #details div.tabularData p {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+main section#todayInfo #details div.tabularData div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 main section#weatherToogler {
@@ -59,4 +116,9 @@ span.light {
 
 span.dark {
   color: var(--darkWhite);
+}
+
+svg {
+  max-width: 6em;
+  max-height: 6em;
 }

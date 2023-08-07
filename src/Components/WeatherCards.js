@@ -6,13 +6,13 @@ export const WeatherCards = (objectEntry, isTempInC) => {
   const minTempInfo = getTempInfo(minTemp);
   const maxTempInfo = getTempInfo(maxTemp);
   const minTempMessage = isTempInC
-    ? `${minTempInfo.C} ºC`
-    : `${minTempInfo.F} F`;
+    ? `${minTempInfo.C} º`
+    : `${minTempInfo.F} º`;
   const maxTempMessage = isTempInC
-    ? `${maxTempInfo.C} ºC`
-    : `${maxTempInfo.F} F`;
+    ? `${maxTempInfo.C} º`
+    : `${maxTempInfo.F} º`;
   return `
-  <article class="weatherCard">
+  <article class="weatherCard" data-dayName=${key}>
     <p><span class="light">${key}</span></p>
     <p>
         <big><span class="light">${maxTempMessage} /</span></big> 

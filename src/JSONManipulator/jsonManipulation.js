@@ -47,6 +47,8 @@ function getFullForecastInfo({ list }) {
           (1 / 1000) /* 1km === 10000m */ *
           (3600 / 1) /* 1h === 3600s */, // km / h
         cloudiness: list[i]["clouds"]["all"], // %
+        description: list[i]["weather"][0]["description"],
+        icon: list[i]["weather"][0]["icon"],
       };
       groupedInfo[day].push(forecastInfo);
       i++;
