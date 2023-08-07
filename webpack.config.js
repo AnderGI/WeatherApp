@@ -9,7 +9,12 @@ const rulesForJS = {
   },
 };
 
-const rules = [rulesForJS];
+const rulesForCss = {
+  test: /\.css$/i,
+  use: ["style-loader", "css-loader"],
+};
+
+const rules = [rulesForJS, rulesForCss];
 
 module.exports = {
   entry: "./src/app.js",
