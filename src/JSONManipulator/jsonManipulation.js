@@ -1,5 +1,4 @@
 import { getDateName } from "../utils/date";
-import { getTempInfo } from "../utils/temperature";
 
 export const getJSONData = ({ city, list }) => {
   return Object.assign(

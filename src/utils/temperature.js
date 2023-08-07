@@ -1,7 +1,7 @@
 export const getTempInfo = (tempK) => {
   return {
     C: Math.round(tempToC(tempK)),
-    K: Math.round(tempToF(tempK)),
+    F: Math.round(tempToF(tempK)),
   };
 };
 
