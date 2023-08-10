@@ -1,6 +1,6 @@
 import { getDateName } from "../utils/date";
 
-export const getJSONData = ({ city, list }) => {
+export const getWeatherData = ({ city, list }) => {
   return Object.assign(
     {},
     {

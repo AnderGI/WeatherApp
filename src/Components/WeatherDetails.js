@@ -4,8 +4,12 @@ import { $ } from "../utils/selectors";
 import { getTempInfo } from "../utils/temperature";
 
 export function WeatherDetails({ city, forecastInfo }, isTempInC) {
-  const selectedArticleName = $("article.selected").dataset.dayname;
-  const weatherForectast = forecastInfo[selectedArticleName][0];
+  const selectedWeatherCardName = $("article.selected").dataset.dayname; //get the name of the day of the weather card that is selected
+  //forecast info is an object
+  //the kays are the days o fthe week that will be forecasted
+  //each key hols an array of objects with the weather forecast (every 3h a new forecast)
+  //get the first one
+  const weatherForectast = forecastInfo[selectedWeatherCardName][0];
   const { C, F } = getTempInfo(weatherForectast["temp"]);
   return `
       <div class="temps">
@@ -21,7 +25,7 @@ export function WeatherDetails({ city, forecastInfo }, isTempInC) {
       <big><span class="light">${city.name}, ${city.country}</span></big>
       <span class="dark">${dateFormatter(
         weatherForectast["date_txt"],
-        "LLL d,  yyyy"
+        "LLL d,  yyyy  // p"
       )}</span>
     </div>
     <div class="tabularData">

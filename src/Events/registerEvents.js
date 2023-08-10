@@ -1,3 +1,4 @@
+import { renderGraph } from "../UI/renderGraph";
 import { renderWeatherInfo } from "../UI/renderPage";
 
 export function registerEvents(JSONData) {
@@ -16,4 +17,5 @@ function targetWeatherCardsSelectedState(element, JSONData) {
     .classList.remove("selected");
   element.classList.add("selected");
   renderWeatherInfo(JSONData);
+  //renderGraph(JSONData)
 }

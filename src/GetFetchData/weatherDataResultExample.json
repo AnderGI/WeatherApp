@@ -1,0 +1,489 @@
+{
+    "city":{
+       "name":"Bilbao",
+       "country":"ES",
+       "sunrise":1691644266,
+       "sunset":1691695395,
+       "timezone":7200
+    },
+    "forecastInfo":{
+       "Thursday":[
+          {
+             "date_txt":"2023-08-10 09:00:00",
+             "temp":295.27,
+             "tempMax":297.87,
+             "tempMin":295.27,
+             "humidity":69,
+             "windSpeed":4.680000000000001,
+             "cloudiness":43,
+             "description":"scattered clouds",
+             "icon":"03d"
+          },
+          {
+             "date_txt":"2023-08-10 12:00:00",
+             "temp":298.3,
+             "tempMax":300.46,
+             "tempMin":298.3,
+             "humidity":58,
+             "windSpeed":11.772,
+             "cloudiness":66,
+             "description":"broken clouds",
+             "icon":"04d"
+          },
+          {
+             "date_txt":"2023-08-10 15:00:00",
+             "temp":299.88,
+             "tempMax":299.88,
+             "tempMin":299.88,
+             "humidity":52,
+             "windSpeed":11.304,
+             "cloudiness":83,
+             "description":"broken clouds",
+             "icon":"04d"
+          },
+          {
+             "date_txt":"2023-08-10 18:00:00",
+             "temp":297.43,
+             "tempMax":297.43,
+             "tempMin":297.43,
+             "humidity":60,
+             "windSpeed":6.192,
+             "cloudiness":56,
+             "description":"broken clouds",
+             "icon":"04d"
+          },
+          {
+             "date_txt":"2023-08-10 21:00:00",
+             "temp":292.93,
+             "tempMax":292.93,
+             "tempMin":292.93,
+             "humidity":82,
+             "windSpeed":1.1520000000000001,
+             "cloudiness":68,
+             "description":"broken clouds",
+             "icon":"04n"
+          }
+       ],
+       "Friday":[
+          {
+             "date_txt":"2023-08-11 00:00:00",
+             "temp":291.85,
+             "tempMax":291.85,
+             "tempMin":291.85,
+             "humidity":84,
+             "windSpeed":4.968,
+             "cloudiness":44,
+             "description":"scattered clouds",
+             "icon":"03n"
+          },
+          {
+             "date_txt":"2023-08-11 03:00:00",
+             "temp":291.2,
+             "tempMax":291.2,
+             "tempMin":291.2,
+             "humidity":81,
+             "windSpeed":4.572,
+             "cloudiness":13,
+             "description":"few clouds",
+             "icon":"02n"
+          },
+          {
+             "date_txt":"2023-08-11 06:00:00",
+             "temp":291.57,
+             "tempMax":291.57,
+             "tempMin":291.57,
+             "humidity":75,
+             "windSpeed":4.932,
+             "cloudiness":7,
+             "description":"clear sky",
+             "icon":"01d"
+          },
+          {
+             "date_txt":"2023-08-11 09:00:00",
+             "temp":299.34,
+             "tempMax":299.34,
+             "tempMin":299.34,
+             "humidity":46,
+             "windSpeed":4.284,
+             "cloudiness":0,
+             "description":"clear sky",
+             "icon":"01d"
+          },
+          {
+             "date_txt":"2023-08-11 12:00:00",
+             "temp":303.56,
+             "tempMax":303.56,
+             "tempMin":303.56,
+             "humidity":36,
+             "windSpeed":9.72,
+             "cloudiness":0,
+             "description":"clear sky",
+             "icon":"01d"
+          },
+          {
+             "date_txt":"2023-08-11 15:00:00",
+             "temp":302.28,
+             "tempMax":302.28,
+             "tempMin":302.28,
+             "humidity":44,
+             "windSpeed":12.024000000000001,
+             "cloudiness":0,
+             "description":"clear sky",
+             "icon":"01d"
+          },
+          {
+             "date_txt":"2023-08-11 18:00:00",
+             "temp":297.43,
+             "tempMax":297.43,
+             "tempMin":297.43,
+             "humidity":60,
+             "windSpeed":7.74,
+             "cloudiness":0,
+             "description":"clear sky",
+             "icon":"01d"
+          },
+          {
+             "date_txt":"2023-08-11 21:00:00",
+             "temp":292.95,
+             "tempMax":292.95,
+             "tempMin":292.95,
+             "humidity":82,
+             "windSpeed":1.0799999999999998,
+             "cloudiness":0,
+             "description":"clear sky",
+             "icon":"01n"
+          }
+       ],
+       "Saturday":[
+          {
+             "date_txt":"2023-08-12 00:00:00",
+             "temp":291.76,
+             "tempMax":291.76,
+             "tempMin":291.76,
+             "humidity":85,
+             "windSpeed":3.168,
+             "cloudiness":0,
+             "description":"clear sky",
+             "icon":"01n"
+          },
+          {
+             "date_txt":"2023-08-12 03:00:00",
+             "temp":291.08,
+             "tempMax":291.08,
+             "tempMin":291.08,
+             "humidity":85,
+             "windSpeed":4.6080000000000005,
+             "cloudiness":23,
+             "description":"few clouds",
+             "icon":"02n"
+          },
+          {
+             "date_txt":"2023-08-12 06:00:00",
+             "temp":291.39,
+             "tempMax":291.39,
+             "tempMin":291.39,
+             "humidity":82,
+             "windSpeed":4.752,
+             "cloudiness":12,
+             "description":"few clouds",
+             "icon":"02d"
+          },
+          {
+             "date_txt":"2023-08-12 09:00:00",
+             "temp":298.05,
+             "tempMax":298.05,
+             "tempMin":298.05,
+             "humidity":58,
+             "windSpeed":5.004,
+             "cloudiness":13,
+             "description":"few clouds",
+             "icon":"02d"
+          },
+          {
+             "date_txt":"2023-08-12 12:00:00",
+             "temp":299.93,
+             "tempMax":299.93,
+             "tempMin":299.93,
+             "humidity":59,
+             "windSpeed":11.268,
+             "cloudiness":45,
+             "description":"scattered clouds",
+             "icon":"03d"
+          },
+          {
+             "date_txt":"2023-08-12 15:00:00",
+             "temp":298.57,
+             "tempMax":298.57,
+             "tempMin":298.57,
+             "humidity":70,
+             "windSpeed":12.06,
+             "cloudiness":94,
+             "description":"overcast clouds",
+             "icon":"04d"
+          },
+          {
+             "date_txt":"2023-08-12 18:00:00",
+             "temp":294.32,
+             "tempMax":294.32,
+             "tempMin":294.32,
+             "humidity":96,
+             "windSpeed":9.648,
+             "cloudiness":94,
+             "description":"light rain",
+             "icon":"10d"
+          },
+          {
+             "date_txt":"2023-08-12 21:00:00",
+             "temp":292.63,
+             "tempMax":292.63,
+             "tempMin":292.63,
+             "humidity":96,
+             "windSpeed":7.848,
+             "cloudiness":100,
+             "description":"light rain",
+             "icon":"10n"
+          }
+       ],
+       "Sunday":[
+          {
+             "date_txt":"2023-08-13 00:00:00",
+             "temp":291.95,
+             "tempMax":291.95,
+             "tempMin":291.95,
+             "humidity":93,
+             "windSpeed":4.284,
+             "cloudiness":100,
+             "description":"light rain",
+             "icon":"10n"
+          },
+          {
+             "date_txt":"2023-08-13 03:00:00",
+             "temp":291.5,
+             "tempMax":291.5,
+             "tempMin":291.5,
+             "humidity":91,
+             "windSpeed":3.0599999999999996,
+             "cloudiness":100,
+             "description":"overcast clouds",
+             "icon":"04n"
+          },
+          {
+             "date_txt":"2023-08-13 06:00:00",
+             "temp":291.32,
+             "tempMax":291.32,
+             "tempMin":291.32,
+             "humidity":92,
+             "windSpeed":1.9800000000000002,
+             "cloudiness":100,
+             "description":"overcast clouds",
+             "icon":"04d"
+          },
+          {
+             "date_txt":"2023-08-13 09:00:00",
+             "temp":292.08,
+             "tempMax":292.08,
+             "tempMin":292.08,
+             "humidity":89,
+             "windSpeed":1.8720000000000003,
+             "cloudiness":100,
+             "description":"overcast clouds",
+             "icon":"04d"
+          },
+          {
+             "date_txt":"2023-08-13 12:00:00",
+             "temp":294.1,
+             "tempMax":294.1,
+             "tempMin":294.1,
+             "humidity":80,
+             "windSpeed":4.248,
+             "cloudiness":100,
+             "description":"overcast clouds",
+             "icon":"04d"
+          },
+          {
+             "date_txt":"2023-08-13 15:00:00",
+             "temp":295.02,
+             "tempMax":295.02,
+             "tempMin":295.02,
+             "humidity":77,
+             "windSpeed":8.676,
+             "cloudiness":99,
+             "description":"light rain",
+             "icon":"10d"
+          },
+          {
+             "date_txt":"2023-08-13 18:00:00",
+             "temp":293.57,
+             "tempMax":293.57,
+             "tempMin":293.57,
+             "humidity":87,
+             "windSpeed":5.6160000000000005,
+             "cloudiness":98,
+             "description":"light rain",
+             "icon":"10d"
+          },
+          {
+             "date_txt":"2023-08-13 21:00:00",
+             "temp":292.52,
+             "tempMax":292.52,
+             "tempMin":292.52,
+             "humidity":93,
+             "windSpeed":3.852,
+             "cloudiness":99,
+             "description":"light rain",
+             "icon":"10n"
+          }
+       ],
+       "Monday":[
+          {
+             "date_txt":"2023-08-14 00:00:00",
+             "temp":292.13,
+             "tempMax":292.13,
+             "tempMin":292.13,
+             "humidity":97,
+             "windSpeed":3.456,
+             "cloudiness":100,
+             "description":"light rain",
+             "icon":"10n"
+          },
+          {
+             "date_txt":"2023-08-14 03:00:00",
+             "temp":291.83,
+             "tempMax":291.83,
+             "tempMin":291.83,
+             "humidity":97,
+             "windSpeed":2.7,
+             "cloudiness":100,
+             "description":"light rain",
+             "icon":"10n"
+          },
+          {
+             "date_txt":"2023-08-14 06:00:00",
+             "temp":291.9,
+             "tempMax":291.9,
+             "tempMin":291.9,
+             "humidity":97,
+             "windSpeed":2.2680000000000002,
+             "cloudiness":100,
+             "description":"overcast clouds",
+             "icon":"04d"
+          },
+          {
+             "date_txt":"2023-08-14 09:00:00",
+             "temp":292.57,
+             "tempMax":292.57,
+             "tempMin":292.57,
+             "humidity":95,
+             "windSpeed":3.276,
+             "cloudiness":100,
+             "description":"light rain",
+             "icon":"10d"
+          },
+          {
+             "date_txt":"2023-08-14 12:00:00",
+             "temp":293.31,
+             "tempMax":293.31,
+             "tempMin":293.31,
+             "humidity":92,
+             "windSpeed":5.22,
+             "cloudiness":100,
+             "description":"light rain",
+             "icon":"10d"
+          },
+          {
+             "date_txt":"2023-08-14 15:00:00",
+             "temp":294.62,
+             "tempMax":294.62,
+             "tempMin":294.62,
+             "humidity":81,
+             "windSpeed":6.588,
+             "cloudiness":97,
+             "description":"overcast clouds",
+             "icon":"04d"
+          },
+          {
+             "date_txt":"2023-08-14 18:00:00",
+             "temp":294.13,
+             "tempMax":294.13,
+             "tempMin":294.13,
+             "humidity":82,
+             "windSpeed":6.0120000000000005,
+             "cloudiness":96,
+             "description":"overcast clouds",
+             "icon":"04d"
+          },
+          {
+             "date_txt":"2023-08-14 21:00:00",
+             "temp":291.5,
+             "tempMax":291.5,
+             "tempMin":291.5,
+             "humidity":94,
+             "windSpeed":2.3040000000000003,
+             "cloudiness":68,
+             "description":"broken clouds",
+             "icon":"04n"
+          }
+       ],
+       "Tuesday":[
+          {
+             "date_txt":"2023-08-15 00:00:00",
+             "temp":290.4,
+             "tempMax":290.4,
+             "tempMin":290.4,
+             "humidity":97,
+             "windSpeed":2.2680000000000002,
+             "cloudiness":52,
+             "description":"broken clouds",
+             "icon":"04n"
+          },
+          {
+             "date_txt":"2023-08-15 03:00:00",
+             "temp":290.03,
+             "tempMax":290.03,
+             "tempMin":290.03,
+             "humidity":97,
+             "windSpeed":1.1520000000000001,
+             "cloudiness":31,
+             "description":"scattered clouds",
+             "icon":"03n"
+          },
+          {
+             "date_txt":"2023-08-15 06:00:00",
+             "temp":291.1,
+             "tempMax":291.1,
+             "tempMin":291.1,
+             "humidity":95,
+             "windSpeed":0.864,
+             "cloudiness":61,
+             "description":"light rain",
+             "icon":"10d"
+          }
+       ]
+    },
+    "dailyMinMaxTemps":{
+       "Thursday":{
+          "minTemp":292.93,
+          "maxTemp":300.46
+       },
+       "Friday":{
+          "minTemp":291.2,
+          "maxTemp":303.56
+       },
+       "Saturday":{
+          "minTemp":291.08,
+          "maxTemp":299.93
+       },
+       "Sunday":{
+          "minTemp":291.32,
+          "maxTemp":295.02
+       },
+       "Monday":{
+          "minTemp":291.5,
+          "maxTemp":294.62
+       },
+       "Tuesday":{
+          "minTemp":290.03,
+          "maxTemp":291.1
+       }
+    }
+ }
