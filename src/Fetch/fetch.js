@@ -2,7 +2,7 @@
 export function weatherForecast(cityName, key) {
   return new Promise((resolve, reject) => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${key}`,
+      `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${key}`,
       {
         mode: "cors",
       }
