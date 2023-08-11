@@ -4,9 +4,9 @@ import { weatherForecast } from "../Fetch/fetch";
 import { getWeatherData } from "../GetFetchData/getWeatherData";
 import { renderPage } from "./renderPage";
 
-export async function renderApp() {
+export async function renderApp(location = "Bilbao") {
   try {
-    const data = await weatherForecast("Bilbao", OPEN_WEATHER_MAP); //fetch and receive the json data
+    const data = await weatherForecast(location, OPEN_WEATHER_MAP); //fetch and receive the json data
 
     const groupedData = getWeatherData(data); //extract the needed information for the weather
     renderPage(groupedData);

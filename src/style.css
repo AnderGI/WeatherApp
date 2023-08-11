@@ -30,7 +30,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
+  padding: 1em 4em;
 }
 
 header #tempToggle {
@@ -59,6 +59,21 @@ header #tempToggle button.tempBtn:hover {
 header #tempToggle button.tempBtn:hover,
 main section#weatherToogler article:hover {
   cursor: pointer;
+}
+
+header form input[type="text"] {
+  padding: 0.5em;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  background-color: transparent;
+  color: var(--lightWhite);
+  border: 2px solid var(--darkWhite);
+  border-radius: 10px;
+  outline: none;
+}
+
+header form input[type="text"]:focus {
+  box-shadow: 0em 0em 1em 0.1em var(--darkWhite);
 }
 
 body main {

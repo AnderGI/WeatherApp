@@ -1,5 +1,7 @@
-import { renderGraph } from "../UI/renderGraph";
+import { renderApp } from "../UI/renderApp";
 import { renderPage, renderWeatherInfo, setTempInC } from "../UI/renderPage";
+import { $ } from "../utils/selectors";
+
 let data;
 export function registerEvents(JSONData) {
   data = JSONData;
@@ -11,6 +13,12 @@ export function registerEvents(JSONData) {
     } else if (target.matches("button.tempBtn")) {
       toogleSelectedClassAtTempButtons(target);
     }
+  });
+
+  document.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const textInput = $('input[type="text"]');
+    await renderApp(textInput.value);
   });
 }
 
