@@ -25,6 +25,42 @@ body {
   background-color: var(--backgroundBody);
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+}
+
+header #tempToggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1em;
+}
+
+header #tempToggle button {
+  border: none;
+  background-color: transparent;
+  padding: 1em 0.75em;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  color: var(--lightWhite);
+  height: 100%;
+}
+
+header #tempToggle button.tempBtn.selected,
+header #tempToggle button.tempBtn:hover {
+  border: 2px solid var(--lightWhite);
+}
+
+header #tempToggle button.tempBtn:hover,
+main section#weatherToogler article:hover {
+  cursor: pointer;
+}
+
 body main {
   display: grid;
   grid-template-columns: 1fr;

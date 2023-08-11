@@ -26,9 +26,14 @@ function renderWeatherCards({ dailyMinMaxTemps }) {
 export function renderWeatherInfo(JSONData) {
   const { city, forecastInfo } = JSONData;
   const weatherDetailsSection = $("section#details");
+  weatherDetailsSection.replaceChildren();
   weatherDetailsSection.innerHTML = WeatherDetails(
     { city, forecastInfo },
     isTempInC
   );
   renderGraph(JSONData, isTempInC);
+}
+
+export function setTempInC(_isTempInC) {
+  isTempInC = _isTempInC;
 }
